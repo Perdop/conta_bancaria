@@ -27,7 +27,8 @@ contas.cadastrar(cp2);
 
 contas.listarTodas();
 
-    while (true) {
+    try {
+       while (true) {
 
         console.log(colors.bg.black, colors.fg.yellow, 
                     "*****************************************************");
@@ -187,7 +188,19 @@ contas.listarTodas();
                 keyPress()
                 break;
         }
+    } 
+    } catch (error) {
+        if (error instanceof Error) {
+            console.log(colors.fg.red, "\nOcorreu um erro inesperado: ", error.message, colors.reset);
+            keyPress();
+        } else {
+            console.log(colors.fg.red, "\nOcorreu um erro desconhecido: ", error, colors.reset);
+            keyPress();
+        }
+
     }
+
+    
 
 }
 
