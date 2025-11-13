@@ -220,18 +220,19 @@ console.log("\nCriar Contas\n");
 }
 
 /* Função com os dados da pessoa desenvolvedora */
-function sobre(): void {
+const sobre = (): void => {
     console.log("\n*****************************************************");
     console.log("Projeto Desenvolvido por: ");
     console.log("Generation Brasil - generation@generation.org");
     console.log("github.com/conteudoGeneration");
     console.log("*****************************************************");
-}
+};
 
-function keyPress(): void {
+const keyPress = (): void => {
     console.log(colors.reset, "");
     console.log("\nPressione enter para continuar...");
     readlinesync.prompt();
-}
+};
+
 
 main();
